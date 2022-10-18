@@ -36,3 +36,5 @@ module.exports = defineConfig({
   lintOnSave: false,
 });
 ```
+![Screenshot_1](https://user-images.githubusercontent.com/83815560/196406082-d90a078a-5580-41e2-b41f-f394ea951db7.png)
+
