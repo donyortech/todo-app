@@ -28,7 +28,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 npm install bootstrap
 ```
 
-### error 
+### error Component name should always be Multi-Word|| Vue/multi-word-Component-names
 ```js
 const { defineConfig } = require("@vue/cli-service");
 module.exports = defineConfig({
