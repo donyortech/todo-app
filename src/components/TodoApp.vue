@@ -30,12 +30,12 @@
           <td>{{ task.name }}</td>
           <td>{{ task.status }}</td>
           <td>
-            <div class="text-center">
+            <div class="text-center" @click="editTask(index)">
               <span class="fa fa-pen"></span>
             </div>
           </td>
           <td>
-            <div class="text-center">
+            <div class="text-center" @click="deleteTask(index)">
               <span class="fa fa-trash"></span>
             </div>
           </td>
@@ -53,7 +53,8 @@ export default {
   },
   data() {
     return {
-      task: "Hello World",
+      task: "",
+      editTask: null,
       tasks: [
         {
           name: "Style banana from the store.",
@@ -68,7 +69,19 @@ export default {
   },
   methods: {
     submitTask() {
-      console.log(this.task);
+      if (this.task.length === 0) return;
+      this.tasks.push({
+        name: this.task,
+        status: "to-do",
+      });
+      this.task = "";
+    },
+    deleteTask(index) {
+      this.tasks.splice(index, 1);
+    },
+    editTask(index) {
+      this.task = this.tasks[index].name;
+      this.editTask = index;
     },
   },
 };
