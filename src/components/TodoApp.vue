@@ -77,11 +77,11 @@ export default {
 
       tasks: [
         {
-          name: "Steal bananas from the supermarket.",
+          name: "there is a meeting today at 19:00",
           status: "to-do",
         },
         {
-          name: "Eat 1 kg chocolate in 1 hour.",
+          name: "I did the tasks today",
           status: "in-progress",
         },
         {
