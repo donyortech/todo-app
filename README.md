@@ -27,3 +27,12 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ```
 npm install bootstrap
 ```
+
+### error 
+```
+const { defineConfig } = require("@vue/cli-service");
+module.exports = defineConfig({
+  transpileDependencies: true,
+  lintOnSave: false,
+});
+```
