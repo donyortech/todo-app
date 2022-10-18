@@ -3,7 +3,7 @@
     <!-- Heading -->
     <h2 class="text-center mt-5">Todo App</h2>
 
-    <!-- Input -->
+    <!-- Inputs -->
     <div class="d-flex mt-5">
       <input
         type="text"
@@ -22,8 +22,8 @@
         <tr>
           <th scope="col">Task</th>
           <th scope="col" style="width: 120px">Status</th>
-          <th scope="col" class="text-center">#</th>
-          <th scope="col" class="text-center">#</th>
+          <th scope="col" class="text-center">delete</th>
+          <th scope="col" class="text-center">edit</th>
         </tr>
       </thead>
       <tbody>
@@ -75,7 +75,6 @@ export default {
       editedTask: null,
       statuses: ["to-do", "in-progress", "finished"],
 
-      /* Status could be: 'to-do' / 'in-progress' / 'finished' */
       tasks: [
         {
           name: "Steal bananas from the supermarket.",
@@ -94,49 +93,32 @@ export default {
   },
 
   methods: {
-    /**
-     * Capitalize first character
-     */
     capitalizeFirstChar(str) {
       return str.charAt(0).toUpperCase() + str.slice(1);
     },
 
-    /**
-     * Change status of task by index
-     */
     changeStatus(index) {
       let newIndex = this.statuses.indexOf(this.tasks[index].status);
       if (++newIndex > 2) newIndex = 0;
       this.tasks[index].status = this.statuses[newIndex];
     },
 
-    /**
-     * Deletes task by index
-     */
     deleteTask(index) {
       this.tasks.splice(index, 1);
     },
 
-    /**
-     * Edit task
-     */
     editTask(index) {
       this.task = this.tasks[index].name;
       this.editedTask = index;
     },
 
-    /**
-     * Add / Update task
-     */
     submitTask() {
       if (this.task.length === 0) return;
 
-      /* We need to update the task */
       if (this.editedTask != null) {
         this.tasks[this.editedTask].name = this.task;
         this.editedTask = null;
       } else {
-        /* We need to add new task */
         this.tasks.push({
           name: this.task,
           status: "todo",
@@ -154,13 +136,12 @@ export default {
   cursor: pointer;
 }
 .noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .line-through {
   text-decoration: line-through;
