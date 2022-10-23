@@ -1,8 +1,8 @@
 # todo-app
 
-<p align="center">
+
   https://img.shields.io/visual-studio-marketplace/i/hollowtree.vue-snippets
-</p>
+
 
 ## Project setup
 ```
