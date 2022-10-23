@@ -1,4 +1,4 @@
-# todo-app
+# todo-apps
 
 
   https://img.shields.io/visual-studio-marketplace/i/hollowtree.vue-snippets
