@@ -1,4 +1,4 @@
-# todo-appd <img src="https://img.icons8.com/nolan/64/todo-list.png"/>
+# todo-appd <img src="https://img.icons8.com/clouds/100/000000/checklist.png"/>
 
 ![Twitter Follow](https://img.shields.io/twitter/follow/@donyor_rakhmatullaev?color=%2326A5E4&logo=telegram&style=social)
 
