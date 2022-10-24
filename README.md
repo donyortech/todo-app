@@ -1,9 +1,6 @@
 # todo-appd
 
 
-  https://img.shields.io/visual-studio-marketplace/i/hollowtree.vue-snippets
-
-
 ## Project setup
 ```
 npm install
